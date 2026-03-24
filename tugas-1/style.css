@@ -21,7 +21,8 @@ body {
 
 /* Class selector (.) diawali dengan titik, menargetkan elemen dengan atribut class="site-header" */
 .site-header {
-    background: #f44242;
+    background: #0096c7;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.06);
     color: rgb(255, 255, 255);
     /* Teks dalam header berwarna putih */
     /* Jarak ruang di dalam batas elemen: 1.5rem bagian atas-bawah, 1rem kiri-kanan */
@@ -101,7 +102,12 @@ input[type="email"],
 select {
     padding: 0.5rem 0.6rem;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: none;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, gray, black) no-repeat bottom;
+    background-size: 100% 1px;
+    transition: background-size 0.5s ease, background 0.3s ease;
+    outline: none;
     /* Garis tepi tipis abu-abu */
     font-size: 0.95rem;
 }
@@ -113,8 +119,11 @@ select:focus {
     /* outline dinonaktifkan untuk menghilangkan border glow standar bawaan browser... */
     outline: none;
     /* lalu diganti dengan styling border biru buatan kita sendiri */
-    border-color: #4285f4;
-    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.15);
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, gray, black);
+    border-image-slice: 1;
+    outline: none;
+    /* box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.15); */
 }
 
 /* Styling tombol (Button) */
